@@ -67,6 +67,9 @@ namespace lima
 		virtual void getReadoutSpeedFromCamera(ushort& in_out_value);
 		virtual void setReadoutSpeed( ushort readout_speed);
 
+		virtual void setAcquisitionType( ushort acqType);
+		virtual void getAcquisitionType( ushort& acqType);
+
 	private:
 	    Camera& m_cam;
 	};

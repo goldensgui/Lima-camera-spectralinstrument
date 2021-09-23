@@ -191,6 +191,14 @@ namespace SpectralInstrument
 
         void getReadoutSpeedFromCamera(ushort& in_out_value);
 
+        void setAcquisitionType(ushort acqType);
+
+        void getAcquisitionType(ushort& acqType) const;
+
+        ushort getAcquisitionTypeValue();
+
+        void setAcquisitionTypeValue(ushort acqType);
+
     //-----------------------------------------------------------------------------
 	private:
         // execute a stop acq command
@@ -257,6 +265,8 @@ namespace SpectralInstrument
 
         // Readout speed
         ushort m_readout_speed_value_sc;
+
+        ushort m_acqType;
 
 		//-----------------------------------------------------------------------------
         // Constants

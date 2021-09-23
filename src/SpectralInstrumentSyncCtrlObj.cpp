@@ -197,4 +197,21 @@ void SyncCtrlObj::setReadoutSpeed(ushort readout_speed)
     m_cam.setReadoutSpeed(readout_speed);
 }
 
+//-----------------------------------------------------
+// @brief
+//-----------------------------------------------------
+void SyncCtrlObj::setAcquisitionType(ushort acqType)
+{
+    m_cam.setAcquisitionType(acqType);
+}
+
+//-----------------------------------------------------
+// @brief
+//-----------------------------------------------------
+void SyncCtrlObj::getAcquisitionType(ushort& acqType)
+{
+    DEB_MEMBER_FUNCT();    
+
+    m_cam.getAcquisitionType(acqType);
+}
 

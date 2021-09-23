@@ -225,3 +225,24 @@ void Camera::setReadoutSpeed(ushort readout_speed_value)
    DEB_PARAM() << DEB_VAR1(readout_speed_value);
    CameraControl::getInstance()->setReadoutSpeedValue((uint32_t)readout_speed_value);
 }
+
+
+//-----------------------------------------------------------------------------
+/// Get the current acquisition type value
+//-----------------------------------------------------------------------------
+void Camera::getAcquisitionType(ushort& in_out_value) const
+{
+    DEB_MEMBER_FUNCT();
+    in_out_value = CameraControl::getConstInstance()->getAcquisitionType();
+    DEB_RETURN() << DEB_VAR1(in_out_value);
+}
+
+//-----------------------------------------------------------------------------
+/// Set the new acquisition type value
+//-----------------------------------------------------------------------------
+void Camera::setAcquisitionType(ushort acq_type_value)
+{
+   DEB_MEMBER_FUNCT();
+   DEB_PARAM() << DEB_VAR1(acq_type_value);
+   CameraControl::getInstance()->setAcquisitionType((lima::SpectralInstrument::NetAnswerGetSettings::AcquisitionType)acq_type_value);
+}

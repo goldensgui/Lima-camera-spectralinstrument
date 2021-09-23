@@ -430,3 +430,30 @@ void Camera::setReadoutSpeedValue(ushort readout_speed_value)
     m_readout_speed_value_sc = readout_speed_value;
     setReadoutSpeed(static_cast<uint32_t>(m_readout_speed_value_sc));
 }
+
+
+/****************************************************************************************************
+ * \fn ushort getAcquisitionTypeValue() 
+ * \brief  get current acquisition type value (Light, Dark, Triggered)
+ * \param  none
+ * \return acquisition type value
+ ****************************************************************************************************/
+ushort Camera::getAcquisitionTypeValue()
+{
+    ushort tmp;
+    getAcquisitionType(tmp); 
+    m_acqType = tmp;
+    return m_acqType;
+}
+
+/****************************************************************************************************
+ * \fn void getAcquisitionTypeValue() 
+ * \brief  set current acquisiiton type value (Light, Dark, Triggered) 
+ * \param  acqType new acquisiton type value
+ * \return none
+ ****************************************************************************************************/
+void Camera::setAcquisitionTypeValue(ushort acqType)
+{
+    m_acqType = acqType;
+    setAcquisitionType( acqType );
+}
